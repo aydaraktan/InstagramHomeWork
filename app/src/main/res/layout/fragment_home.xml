@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.home.Home">
+
+    <Toolbar
+        android:id="@+id/homeToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/homePhoto"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/home_photo_icon"
+        app:layout_constraintBottom_toBottomOf="@id/homeToolBar"
+        app:layout_constraintStart_toStartOf="@id/homeToolBar"
+        app:layout_constraintTop_toTopOf="@id/homeToolBar" />
+
+    <ImageView
+        android:layout_width="105dp"
+        android:layout_height="30dp"
+        android:src="@drawable/instagram_icon"
+        app:layout_constraintBottom_toBottomOf="@id/homeToolBar"
+        app:layout_constraintEnd_toEndOf="@id/homeToolBar"
+        app:layout_constraintStart_toStartOf="@id/homeToolBar"
+        app:layout_constraintTop_toTopOf="@id/homeToolBar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeToolBar"
+        tools:listitem="@layout/item_home_rv"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

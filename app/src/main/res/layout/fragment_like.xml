@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.like.Like">
+    <Toolbar
+        android:id="@+id/likeToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Following"
+        app:layout_constraintStart_toStartOf="@id/likeToolBar"
+        app:layout_constraintEnd_toEndOf="@id/likeToolBar"
+        app:layout_constraintTop_toTopOf="@id/likeToolBar"
+        app:layout_constraintBottom_toBottomOf="@id/likeToolBar"
+        android:fontFamily="@font/acme"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/likeRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_like_rv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/likeToolBar"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
